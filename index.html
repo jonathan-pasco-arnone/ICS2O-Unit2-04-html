@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="My 6th webpage">
+    <meta name="keywordss" content="Hello, World! website">
+    <meta name="author" content="Jonathan Pasco-Arnone">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My webpage</title>
+  </head>
+  <body>
+    <form action="/action_page.php">
+      <input type="text" id="hey" name="hey" value=>
+    </form>
+    <br>
+    <button id="first">click first</button>
+    <button id="second">click second</button>
+    <script>
+    let heysay = "Hey";
+    heysay = document.getElementById("hey").value = heysay;
+//The javascript code needs to be in the html doc or it won't work
+function first() {
+  heysay = "Hello, World!";
+  heysay = document.getElementById("hey").value = heysay;
+}
+function change() {
+  document.body.style.background = "lightblue";
+  alert (heysay);
+}
+//This event listener listens for clicks of a button
+document.getElementById("first").addEventListener("click",first);
+document.getElementById("second").addEventListener("click",change);
+    </script>
+  </body>
+</html>
